@@ -5,24 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/tailwind.css" rel="stylesheet">
-  
-  <!-- gSheets -->
-  <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
-
-  <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbyaRESMaGMhEUl7Y_LK3OfwNnmcJkEN74qlZX5MDkr3rFmNirpy9g2DGZzqc7m4tpKj7A/exec'
-	const form = document.forms['submit-to-google-sheet']
-  
-	form.addEventListener('submit', e => {
-	  e.preventDefault()
-	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		.then(response => console.log('Success!', response))
-		.catch(error => console.error('Error!', error.message))
-	})
-  </script>
-  <!-- END gSheets -->
 
 </head>
 <body>
@@ -151,14 +133,6 @@
 				<button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
 				  Say Hello!
 				</button>
-			</form>
-
-			<!-- gSheets Form -->
-			<form name="submit-to-google-sheet">
-				<input name="email" type="email" placeholder="Email" required>
-				<input name="firstName" type="text" placeholder="First Name">
-  				<input name="lastName" type="text" placeholder="Last Name">
-				<button type="submit">Send</button>
 			</form>
 		  </div>
 		</div>
